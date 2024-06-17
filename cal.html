@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="./cal.css">
+    
+    <!-- bootstarp -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="container">
+        <div class="row">
+            <div class="col-1"></div>
+        
+            <div class="col-10" >
+                <div class="row d-flex">
+    
+                    <div class="col-4">
+
+                    </div>
+                    <div class="col-4 m-2 ms-0 text-center" style="align-items: center;justify-content: center; " id="colour">
+                        
+                        <div class="row-1">
+                            <h1 style="align-items: center;font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;" class="text-light m-4 text-center ">Calculator</h1>
+                        </div>
+                        <div class="row-4">
+                            
+                            <div >
+                                <input type="text" placeholder=" 0  " class="shadow rounded ms-2" style="width:92% ;height:40px ;border:1px rgb(242, 230, 230) solid ;text-align: right; " readonly id="result">
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="row-7 d-flex ">
+                            
+                            <div class="col-3 m-2 ms-0 ">
+                                <div class="row-2 mt-3">
+                                    <button type="button" value="AC" class="btn btn-primary shadow" style="width:60% ; height: 90%;" onclick="clearAL()">AC</button>
+                                </div>
+                                <div class="row-2 mt-3">
+                                    <button type="button" value="7" class="btn btn-light shadow" style="width:60% ; height: 100%; " onclick="display(7)">7</button>
+                                </div>
+                                <div class="row-2 mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="4" onclick="display(4)">4</button>
+                                </div>
+                                <div class="row-2 mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="1" onclick="display(1)">1</button>
+                                </div>
+                                <div class="row-2 mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="0" onclick="display(0)">0</button>
+                                </div>
+                                <div class="row-2">
+                                    
+                                </div>
+            
+                            </div>
+                            <div class="col-3 m-2 ms-0">
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-primary shadow" style="width:60% ; height: 100%; "  onclick="del()">Del</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="8" onclick="display(8)">8</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="5" onclick="display(5)">5</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="2" onclick="display(2)">2</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="0" onclick="display(0)">0.00</button>
+                                </div>
+                                <div class="row-2">
+                                   
+                                </div>
+                            </div>
+                            <div class="col-3 m-2 ms-0">
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="%" onclick="display('%')">%</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="9" onclick="display(9)">9</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="6" onclick="display(6)">6</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="3" onclick="display(3)">3</button>
+                                </div>
+                                <div class="row-2  mt-3"> 
+                                    <button type="button" class="btn btn-light shadow" style="width:60% ; height: 100%; " value="." onclick="display('.')">.</button>
+                                </div>
+                                <div class="row-2">
+                                    
+                                </div>
+                            </div>
+                            <div class="col-3 m-2 ms-0">
+                                <div class="row-2  mt-3">
+                                     <button type="button" class="btn btn-warning shadow" style="width:60% ; height: 100%;" value="/" onclick="display('/')">/</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                     <button type="button" class="btn btn-warning shadow" style="width:60% ; height: 100%; " value="*" onclick="display('*')">x</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                     <button type="button" class="btn btn-warning shadow" style="width:60% ; height: 100%; "value="-" onclick="display('-')">-</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                     <button type="button" class="btn btn-warning shadow" style="width:60% ; height: 100%; " value="+" onclick="display('+')">+</button>
+                                </div>
+                                <div class="row-2  mt-3">
+                                     <button type="button" class="btn btn-warning shadow" style="width:60% ; height: 100%; " onclick="equal()">=</button>
+                                </div>
+                            <div class="row-2">
+                                
+                            </div>
+                        </div>
+                            
+                            
+                            
+                            
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+            <div class="col-1"></div> 
+        </div>
+        
+        
+    </div>
+    
+</body>
+<script src="./cal.js"></script>
+</html>
